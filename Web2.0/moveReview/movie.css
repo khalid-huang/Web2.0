@@ -1,0 +1,132 @@
+body {
+    color:red;
+    -webkit-text-size-adjust: none;
+    /* For the older version of Chrome;*/
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(images/background.png)
+}
+
+#banner {
+    height: 50px;
+    background-image: url(images/bannerbackground.png);
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+#contentArea {
+    position: relative;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid gray;
+    overflow: hidden;
+}
+
+#movieInformation {
+    width: 250px;
+    background-color: #A2B964;
+    float: right;
+    margin-bottom: 18px; /*for the footer so footer can “have” the height in the document flow 21px = 2*footer.padding+footer.font_size*/
+}
+
+#movieInformation > dl {
+    margin-left: 10px;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+
+#movieInformation > dl > dt {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#reviewPage {
+    position: relative;
+    width: 550px;
+}
+
+#rotten {
+    background-image: url(images/rottenbackground.png);
+    background-repeat: repeat-x;
+}
+
+#rotten img {
+    height: 83px;
+}
+
+#rating {
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+    vertical-align: bottom;
+}
+
+#reviews {
+    font-size: 8pt;
+    color: white;
+    vertical-align: 60%;
+}
+
+#leftReview {
+    width: 47%;
+    margin-left: 2%;
+}
+
+#rightReview {
+    position: absolute;
+    top: 86px;
+    width: 47%;
+    left: 51%;     /*including the margin-left and the leftReview's margin-left and width ； 2% + 47% + 2%；*/
+}
+
+.review_left,
+.review_right {
+    margin-bottom: 3em;
+}
+
+.quote {
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E1D697;
+    border: 2px solid gray;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.quote>img,
+.personalInformation>img {
+    float: left;
+    margin-right: 5px;
+}
+
+.personName {
+    font-style: italic;
+}
+
+
+#footer {
+    position: absolute;
+    /*z-index: -1;*/   /*to set the footer under the lowest level because the absolute*/ 
+    width: 790px;  /*800px - border.width * 2*/
+    bottom: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 5px;
+    background-color: #A2B964;
+}
+
+#valiadtor {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}

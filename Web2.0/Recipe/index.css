@@ -1,0 +1,43 @@
+body {
+    background-color: antiquewhite;
+    font-family: Georgia, Garamond, Serif;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    line-height: 200%;
+    color: #555;
+}
+
+#navMain {
+    line-height: 50px;
+    background-color: #275727;
+    display: block;
+    color: #3e483c;
+    font-size: 20px;
+    width: 80%;
+    margin-top: 0;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+
+nav a {
+    margin-left: 25%;
+    color: #EEE;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+}
+
+figure img {
+    display: block;
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin-left: 100px;
+    box-shadow: 10px 10px 5px #888888;
+}
