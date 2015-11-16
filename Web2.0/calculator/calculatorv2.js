@@ -14,7 +14,6 @@ window.onload = function () {
 			}
 			var	content = event.target.innerText;
 			expression.value = expression.value + content;
-			srcollToEnd();
 		}
 	}
 
@@ -32,7 +31,6 @@ window.onload = function () {
 				}
 				var content = event.target.innerText;
 				expression.value = expression.value + content;
-				srcollToEnd();
 			}
 		}
 	}
@@ -64,7 +62,6 @@ window.onload = function () {
 		var content = expression.value.toString();
 		var len = content.length;
 		expression.value = content.substring(0, len-1);
-		srcollToEnd();
 	}
 
 
@@ -74,11 +71,101 @@ window.onload = function () {
 	}
 }
 
-//让显示区显示最最右边的数字，不然当显示区满了后，后面输入的数字是显示不出来的
-function srcollToEnd() {
-	expression.scrollLeft = expression.scrollWidth - expression.clientWidth;
+function test (input) {
+	postfix = toPostfix(input);
+	return calculate(postfix);
 }
-//双击某些div/span/p的时候不选定当前内容，而导致全片选择
-document.onselectstart = function() {
+
+// calculator the postfix expression
+function calculate(postfix) {
+	var i, item, result;
+	var num = [];
+	for(i = 0; i < postfix.length; i++) {
+		item = parseFloat(postfix[i]);
+		if(!isNaN(item)) {
+			num.push(item);
+		} else {
+			second = num.pop();
+			first = num.pop();
+			switch(postfix[i]) {
+				case '+':
+					result = first + second;
+					num.push(result);
+					break;
+				case '-':
+					result = first - second;
+					num.push(result);
+					break;
+				case '/':
+					result = first / second;
+					num.push(result);
+					break;
+				case '*':
+					result = first * second;
+					num.push(result);
+					break;
+			}
+			//console.log(result);
+		}
+	}
+	result = num.pop();
+	result = parseFloat(result.toFixed(8), 10);
+	return result;
+}
+
+
+// translate the infix expression to the postfix expression
+function toPostfix(infix) {
+	//split the input to the token
+	var regex = /(\(|\)|\/|\*|\-|\+)/;
+	var array= infix.split(regex);
+	var i;
+	var postfix = [];
+	var symbol = [];
+	// remove the empty item
+	for(i = 0; i < array.length; i++) {
+		if(array[i] == "")
+			array.splice(i, 1);
+	}
+
+	for(i = 0; i < array.length; i++) {
+		var item = array[i];
+		if(!isNaN(parseFloat(item))) {
+			postfix.push(item);
+		} else {
+			while(symbol.length) {
+				if(compare(item, symbol[symbol.length-1])) { //if the item is greater
+					break;
+				} else {
+					postfix.push(symbol.pop());
+					/*if(postfix[postfix.length-1] == "(")
+						console.log(1);*/
+				}
+			}
+			if(item == ")") {
+				symbol.pop(); //pop "("
+			} else { 
+				symbol.push(item);
+			}
+		}
+	}
+	while(symbol.length) {
+		if(symbol) {
+			postfix.push(symbol.pop());
+		}
+	}
+	return postfix;
+}
+
+function compare(item, top) {
+	if(item.match(/\)/) && top.match(/\(/))
+		return true;
+	if(item.match(/\(/) || top.match(/\(/)) {
+		return true;
+	}
+	if(item.match(/\*|\//) && top.match(/\+|\-/)) {
+		return true;
+	}
+	//console.log(item);
 	return false;
 }
