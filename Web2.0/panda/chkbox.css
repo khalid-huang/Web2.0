@@ -1,0 +1,76 @@
+label.chkbox {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #cfcfcf;
+	margin-right: 80px;
+	-webkit-transition: background-color 0.4s;
+	-o-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+}
+
+label.chkbox.on {
+	background-color: #05abe0;
+
+}
+
+label.chkbox .yes,
+label.chkbox .no {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+label.chkbox .yes {
+	position: absolute; /*because the picture of the yes is less than the no*/
+	left: 12px;
+	top: 7px;
+}
+
+label.chkbox .no {
+	margin-left: 30px;
+	margin-top: 8px;
+}
+
+label.chkbox .toggle {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	display: inline-block;
+	width: 35px;
+	height: 24px;
+	border-radius: 3px;
+	background-image: linear-gradient(#ffffff 0%, #e7e7e7 100%);
+	transform: translateX(1px);
+	-webkit-tansition: -webkit-transform 0.3s;
+	-moz-tansition: -moz-transform 0.3s;
+	-ms-tansition: -ms-transform 0.3s;
+	-o-tansition: -o-transform 0.3s;
+	tansition: transform 0.3s;
+}
+
+label.chkbox.on .toggle {
+	transform: translateX(38px);
+}
+
+label.chkbox .toggle::after {
+	display: inline-block;
+	content: " ";
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin-top: 4px;
+	background-image: linear-gradient(#dddddd 0%, #ffffff 100%);
+}
+
+input[type=checkbox].replace {
+	position: absolute;
+	left: -9999em;
+}
+

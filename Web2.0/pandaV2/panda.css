@@ -1,0 +1,230 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+#gameTime {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#control {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#game {
+	position: relative;
+}
+
+#gamebody {
+	height: 368px; /*each puzzle is 90px*90px and its border 1px so 92px*92px*/
+	width: 368px;
+	font-size: 0px;
+}
+.puzzle, .empty {
+	position: absolute;
+	display: inline-block;
+	height: 90px;
+	width: 90px;
+	border: 1px solid #C5C5C5;
+	transition: transform 0.15s ease-in-out;
+}
+
+.panda {
+	background-image: url(panda.jpg);
+	background-size: 352px 352px;
+}
+
+.beauty {
+	background-image: url(beauty.jpg);
+	background-size: 352px 352px;
+}
+
+
+.empty {
+	background-color: gray;
+}
+
+.firstPos {
+	transform: translate(0px, 0px);
+}
+
+.secondPos {
+	transform: translate(92px, 0px);
+}
+
+.thirdPos {
+	transform: translate(184px, 0px);
+}
+
+.fourthPos {
+	transform: translate(276px, 0px);
+}
+
+.fifthPos {
+	transform: translate(0, 92px);
+}
+
+.sixthPos {
+	transform: translate(92px, 92px);
+}
+
+.seventhPos {
+	transform: translate(184px, 92px);
+}
+
+.eighthPos {
+	transform: translate(276px, 92px);
+}
+
+.ninthPos {
+	transform: translate(0px, 184px);
+}
+
+.tenthPos {
+	transform: translate(92px, 184px);
+}
+
+.eleventhPos {
+	transform: translate(184px, 184px);
+}
+
+.twelfthPos {
+	transform: translate(276px, 184px);
+}
+
+.thirteenthPos {
+	transform: translate(0px, 276px);
+}
+
+.fourteenthPos {
+	transform: translate(92px, 276px);
+}
+
+.fifteenthPos {
+	transform: translate(184px, 276px);
+}
+
+.sixteenthPos {
+	transform: translate(276px, 276px);
+}
+
+#first {
+	background-position: 0px 0px;
+}
+
+#second {
+	background-position: -88px 0px;
+}
+
+#third {
+	background-position: -176px 0px;
+}
+
+#fourth {
+	background-position: -264px 0px;
+}
+
+#fifth {
+	background-position: 0px -88px;
+}
+
+#sixth {
+	background-position: -88px -88px;
+}
+
+#seventh {
+	background-position: -176px -88px;
+}
+
+#eighth {
+	background-position: -264px -88px
+}
+
+#ninth {
+	background-position: 0px -176px;
+}
+
+#tenth {
+	background-position: -88px -176px;
+}
+
+#eleventh {
+	background-position: -176px -176px;
+}
+
+#twelfth {
+	background-position: -264px -176px;
+}
+
+#thirteenth {
+	background-position: 0px -264px;
+}
+
+#fourteenth {
+	background-position: -88px -264px;
+}
+
+#fifteenth {
+	background-position: -176px -264px;
+}
+
+#time {
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 13px;
+	width: 50px;
+	border-radius: 5px
+}
+
+#reset {
+	display: inline-block;
+	width: 60px;
+	border-radius: 8px;
+	font-size: 15px;
+}
+
+.srcImg {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+}
+
+#see_pic {
+	background-color: #1aabe0;
+	margin-top: 10px;
+	color: white;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	box-shadow: 3px 5px 5px black;
+}
+
+#see_pic:active {
+	width: 123px;
+	height: 43px;
+}
+
+#srcImg {
+	position: absolute;
+	display: block;
+	opacity: 0;
+	width: 366px;
+	height: 366px;
+	margin-left: 184px;
+	margin-top: -420px;
+	border: 1px solid #C5C5C5;
+	z-index: -1;
+}
+
+#see_pic:active ~img {
+	opacity: 1;
+	z-index: 2;
+}

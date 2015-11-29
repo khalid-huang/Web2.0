@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="panda.css">
+    <link rel="stylesheet" type="text/css" href="chkbox.css">
+    <script type="text/javascript" src="jquery.js">
+    </script>
+    <script type="text/javascript" src="lodash.js">
+    </script>
+    <script type="text/javascript" src="panda.js">
+    </script>
+</head>
+
+<body>
+    <section id="gameTime">
+        <section>
+            <h1> Puzzle Game</h1>
+        </section>
+        <section>
+            <img class="srcImg" src="panda.jpg" alt="panda" bc="panda"/>
+            <img class="srcImg" src="beauty.jpg" alt="beauty" bc="beauty"/>
+        </section>
+        <section id="control">
+            <label for="switch">Switch</label>
+            <input type="checkbox" id="switch" class="chkbox" />
+            <button type="button" id="reset">Reset</button>
+            <br>
+            <label for="time">Time</label>
+            <input type="text" id="time" disabled="disabled">
+        </section>
+        <section id="game">
+            <section id="gamebody">
+                <span class="puzzle firstPos panda" id="first"></span>
+                <span class="puzzle secondPos panda" id="second"></span>
+                <span class="puzzle thirdPos panda" id="third"></span>
+                <span class="puzzle fourthPos panda" id="fourth"></span>
+                <span class="puzzle fifthPos panda" id="fifth"></span>
+                <span class="puzzle sixthPos panda" id="sixth"></span>
+                <span class="puzzle seventhPos panda" id="seventh"></span>
+                <span class="puzzle eighthPos panda" id="eighth"></span>
+                <span class="puzzle ninthPos panda" id="ninth"></span>
+                <span class="puzzle tenthPos panda" id="tenth"></span>
+                <span class="puzzle eleventhPos panda" id="eleventh"></span>
+                <span class="puzzle twelfthPos panda" id="twelfth"></span>
+                <span class="puzzle thirteenthPos panda" id="thirteenth"></span>
+                <span class="puzzle fourteenthPos panda" id="fourteenth"></span>
+                <span class="puzzle fifteenthPos panda" id="fifteenth"></span>
+                <span class="empty sixteenthPos" id="sixteenth"></span>
+            </section>
+            <section id="button">
+                <button id="see_pic">See the picture</button>
+                <img id="srcImg" src="panda.jpg" alt="panda">
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>
