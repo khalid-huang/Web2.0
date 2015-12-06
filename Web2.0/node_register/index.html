@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+    <section id="register">
+        <h2 id="title">Register in</h2>
+        <div id="formArea">
+            <form action="/" method="POST">
+                <label for="用户名">用户名</label>
+                <input type="text" name="username">
+                <span class="error" id="usernameError"></span>
+                <br/>
+                <label for="学号">学号</label>
+                <input type="text" name="number">
+                <span class="error" id="numberError"></span>
+                <br>
+                <label for="电话">电话</label>
+                <input type="text" name="phone">
+                <span class="error" id="phoneError"></span>
+                <br>
+                <label for="邮箱">邮箱</label>
+                <input type="text" name="email">
+                <span class="error" id="emailError"></span>
+                <br>
+                <input type="reset">
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
