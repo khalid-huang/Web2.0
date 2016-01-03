@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title Signin
+        link(rel="stylesheet" type="text/css" href="/stylesheets/signup.css")
+
+    body
+        section#register
+            h2 Register in
+            div#formArea
+                form(method="POST" action="/signin")
+                    label(for="username") 用户名
+                    input(type="text" name="username" value=user.username)
+                    span.error#usernameError #{error.username}
+                    br
+                    label(for="password") 密码
+                    input(type="password" name="password")
+                    span.error#passwordError #{error.password}
+                    br
+                    input(type="reset")
+                    input(type="submit")
+            form(method="GET" action="/regist")
+                button(type="submit" class="switch-signin-signup")注册
+
+            

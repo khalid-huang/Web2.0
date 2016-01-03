@@ -1,0 +1,48 @@
+html, body {
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+table {
+	border-spacing: 0px;
+}
+
+th, td {
+	border: 1px solid;
+	border-color: gray;
+	padding-left: 3px;
+	padding-right: 20px;
+	text-align: left;
+}
+
+thead tr th{
+	background-color: #021A7E;
+	font-weight: bolder;
+	color: white;
+}
+
+
+.alternate {
+	background-color: #DDDFE1;
+}
+
+.alternate td {
+	border-top: none;
+	border-bottom: none;
+}
+
+.ascend {
+	background-image: url(ascend.png);
+	background-color: #A3B0FD;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.descend {
+	background-image: url(descend.png);
+	background-color: #A3B0FD;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+
+

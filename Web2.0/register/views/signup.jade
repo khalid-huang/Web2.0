@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        title Signup
+        meta(charset="UTF-8")
+        link(rel="stylesheet" type="text/css" href="/stylesheets/signup.css")
+        script(type="text/javascript" src="/javascripts/jquery.js")
+        script(type="text/javascript" src="/javascripts/validator.js")
+        script(type="text/javascript" src="/javascripts/signup.js")
+
+    body
+        section#register
+            h2 Register up
+            h3 #{error2}
+            div#formArea
+                form(method="POST" id="signup" action="/regist")
+                    label(for="username") 用户名
+                    input(type="text" id="username" name="username" value=user.username)
+                    span.error#usernameError #{error.username}
+                    br
+                    label(for="number") 学号
+                    input(type="text" id="number" name="number" value=user.number)
+                    span.error#numberError #{error.number}
+                    br
+                    label(for="password") 密码 
+                    input(type="password" id="password" name="password")
+                    span.error#passwordError #{error.password}
+                    br
+                    label(for="repeatedPassword") 重复密码
+                    input(type="password" id="repeatedPassword" name="repeatedPassword")
+                    span.error#repeatedPasswordError #{error.repeatedPassword}
+                    br
+                    label(for="phone") 电话
+                    input(type="text" id="phone" name="phone" value=user.phone)
+                    span.error#phoneError #{error.phone}
+                    br
+                    label(for="email") 邮箱
+                    input(type="text" id="email" name="email" value=user.email)
+                    span.error#emailError #{error.emailError}
+                    br
+                    input(type="reset")
+                    input(type="submit")
+
+            form(method="GET" action="/signin")
+                button(type="submit" class="switch-signin-signup")登录
+
+
+
+            

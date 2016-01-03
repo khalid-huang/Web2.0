@@ -1,0 +1,230 @@
+/*全局使用*/
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*整体布局*/
+#at-plus-container {
+	position: relative;
+	width:160px;
+	height:100%;
+	/*bottom: 100px;*/ /*让button的位置上浮*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bottom-positioner {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+#info-bar {
+	position: absolute;
+	width: 130px;
+	height: 130px;
+ 	left: 65px;
+	bottom: 90px;
+	border-radius: 50%;
+	background-color: #7E7E7E;
+	opacity: 0;
+	-webkit-transform: translate(-38%, 39%) scale(0.2);
+	-ms-transform: translate(-38%, 39%) scale(0.2);
+	-o-transform: translate(-38%, 39%) scale(0.2);
+	transform: translate(-38%, 39%) scale(0.2);
+	-webkit-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+}
+#button:hover #info-bar {
+	position: absolute;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	border-radius: 50%;
+	background-color: #7E7E7E;
+	bottom: 140px;
+	left: 23px;
+	opacity: 1;
+}
+
+#info-bar ul {
+	margin: 0px;
+	padding: 0px;
+}
+#info-bar li {
+	list-style: none;
+	margin-top: 10px;
+	margin-left: 30px;
+	font-weight: bolder;
+}
+
+#info-bar li img {
+	vertical-align: middle;
+}
+
+#info-bar li span {
+	font-size: 17px;
+	margin-left: 10px;
+	color: white;
+}
+
+#info-bar li.comment span {
+	font-size: 30px;
+}
+
+#info-bar li.mine {
+	display: inline-block;
+ 	margin-left:0px;
+	padding:0px;
+	width: 50%;
+}
+
+#info-bar li.mine span {
+	color:#21D993;
+}
+
+#info-bar li.mine img {
+	display: inline-block;
+	margin-left: 18px;
+}
+
+#info-bar li.like {
+	margin-left: -12px;
+}
+
+#control-ring-container {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	bottom: 26px;
+	left: 0px;
+}
+
+#control-ring-container li {
+	position: absolute;
+	list-style: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #8B8B8B;
+	left: 65px;
+	bottom: 63px;
+	opacity: 0;
+	-webkit-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+#button:hover #control-ring-container .mask {
+	background-image: url(assets/images/nomask.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -55px;
+    margin-bottom: 35px;
+    opacity: 1;
+} 
+
+#button:hover #control-ring-container .history {
+	background-image: url(assets/images/history.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -65px;
+    margin-bottom: -5px;
+    opacity: 1;
+}
+
+#button:hover #control-ring-container .message {
+	background-image: url(assets/images/message.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -50px;
+    margin-bottom: -40px;
+    opacity: 1;
+}
+
+.unread {
+	position: absolute;
+	top: -10px;
+	left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+#button:hover #control-ring-container .setting {
+    background-image: url(assets/images/setting.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -18px;
+    margin-bottom: -60px;
+    opacity: 1;
+}
+
+#button:hover #control-ring-container .sign {
+    background-image: url(assets/images/signin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 20px;
+    margin-bottom: -59px;
+    opacity: 1;
+}
+#button {
+	width: 0px;
+	height: 0px;
+}
+
+
+#button .apb {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: url(assets/images/atplus_white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 20px;
+    background-color: #989fCF;
+    left: 65px;
+    bottom: 90px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+	transition-delay: 0.7s;
+	-webkit-transition-delay: 0.7s;
+	-o-transition-delay: 0.7s;
+	transition-delay: 0.7s;
+}
+#button:hover .apb {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url(assets/images/atplus_green.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 36px 26px;
+    background-color: #2B3AA1;
+	left: 55px;
+	bottom: 80px;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/*hover 这个属性会继承的，所以为了要把hover的区域变到只有apb的区域的话，其他的div设为0*/
+#control-ring-container {
+	width: 0;
+	height: 0;
+}

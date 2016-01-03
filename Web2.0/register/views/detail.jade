@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		title UserInfo Page
+		meta(charset="UTF-8")
+		link(rel="stylesheet" type="text/css" href="/stylesheets/userInfo.css")
+
+	body
+		section#InfoArea
+			p.message #{message}
+			h2 Welcome
+			p
+				span.item 用户名
+				span.info #{user.username}
+			p
+				span.item 学号
+				span.info #{user.number}
+			p
+				span.item 电话
+				span.info #{user.phone}
+			p
+				span.item 邮箱
+				span.info #{user.email}
+				
+			form(action="/signout" method="GET")
+				input(type="submit" value="退出登录")
+
+
